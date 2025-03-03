@@ -11,7 +11,6 @@
 
 @import "tailwindcss";
 
-
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -135,11 +134,9 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-poppins ;
-
+    @apply bg-background text-foreground font-poppins;
   }
 }
-
 
 body::before {
   content: "";
@@ -154,7 +151,7 @@ body::before {
   background-repeat: no-repeat;
 }
 body {
-  background-color: #F3F7FC;
+  background-color: #f3f7fc;
 }
 
 .custom-shadow {
@@ -163,4 +160,169 @@ body {
 
 .button-shadow {
   box-shadow: 5.07px 5.07px 30.43px rgba(2, 26, 16, 0.25);
+}
+
+.gradient-blue-button {
+  background-image: linear-gradient(to right, #14aaf5, #7eceff);
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.gradient-blue-button:hover {
+  opacity: 0.9;
+}
+
+/* Add these styles to your globals.css */
+.pricing-swiper {
+  padding: 20px 10px 40px !important;
+}
+
+/* Add animation for loading state */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
+
+.pricing-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #e1e8f7;
+  opacity: 1;
+  margin: 0 6px !important;
+}
+
+.pricing-swiper .swiper-pagination-bullet-active {
+  background: #6cb6ff;
+  transform: scale(1.2);
+}
+
+.pricing-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+/* Add these styles */
+.pricing-swiper .swiper-slide {
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+}
+
+@media (min-width: 768px) {
+  .pricing-swiper .swiper-slide {
+    max-width: 50%; /* For 2 slides view */
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing-swiper .swiper-slide {
+    max-width: 33.333%; /* For 3 slides view */
+  }
+}
+
+.mask-with-circle {
+  mask-image: url("/assets/half-circle.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  /* For Safari */
+  -webkit-mask-image: url("/assets/half-circle.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+@keyframes scroll-map {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-map {
+  animation: scroll-map 15s linear infinite;
+}
+
+.testimonials-swiper {
+  width: 100%;
+  height: 100%;
+  padding: 8px 4px;
+}
+
+.testimonials-swiper .swiper-slide {
+  height: auto;
+}
+
+/* Hide default Swiper navigation arrows */
+.testimonials-swiper .swiper-button-next,
+.testimonials-swiper .swiper-button-prev {
+  display: none;
+}
+
+.testimonials-swiper .testimonial-excellent {
+  width: 292px !important;
+}
+
+.testimonials-swiper .testimonial-regular {
+  width: 477px !important;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .testimonials-swiper .testimonial-excellent {
+    width: 35% !important;
+  }
+  .testimonials-swiper .testimonial-regular {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-swiper .testimonial-excellent {
+    width: 50% !important;
+  }
+  .testimonials-swiper .testimonial-regular {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-swiper .testimonial-excellent,
+  .testimonials-swiper .testimonial-regular {
+    width: 85% !important;
+  }
+}
+
+/* Optional: Add a subtle shadow to the cards */
+.shadow-lg {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }

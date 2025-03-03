@@ -21,10 +21,10 @@ export default function Home() {
     <Testimonials />
     <Features />
     <HowItWorks />
+    <About />
     <PayoutProcess />
     <ScalingProgram />
     <BlogArchieve />
-    <About />
     <FAQSection />
     <CTASection />
     </main>

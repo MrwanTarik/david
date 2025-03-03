@@ -1,199 +1,278 @@
-import React from 'react'
-import { Check } from 'lucide-react'
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import PricingCard from "./PricingCard";
+import cardIcon1 from "@/public/assets/icons/1.svg";
+import cardIcon2 from "@/public/assets/icons/2.svg";
+import cardIcon3 from "@/public/assets/icons/3.svg";
+import confirmIcon from "@/public/assets/icons/4.svg";
+// Import Swiper components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 const Plan = () => {
+  const [activeTab, setActiveTab] = useState<"basic" | "advanced">("basic");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Set loading to false after component mounts
+    setIsLoading(false);
+  }, []);
+
+  const basicTiers = [
+    {
+      icon: cardIcon1,
+      amount: 10000,
+      seedFunding: "20K Seed funding",
+      seriesFunding: "10K Series funding",
+      maxFunding: "50K Max funding",
+      testFee: 225,
+    },
+    {
+      icon: cardIcon2,
+      amount: 20000,
+      seedFunding: "20K Seed funding",
+      seriesFunding: "10K Series funding",
+      maxFunding: "50K Max funding",
+      testFee: 225,
+    },
+    {
+      icon: cardIcon3,
+      amount: 30000,
+      seedFunding: "30K Seed funding",
+      seriesFunding: "15K Series funding",
+      maxFunding: "150K Max funding",
+      testFee: 325,
+    },
+    {
+      icon: cardIcon1,
+      amount: 40000,
+      seedFunding: "40K Seed funding",
+      seriesFunding: "20K Series funding",
+      maxFunding: "200K Max funding",
+      testFee: 425,
+    },
+    {
+      icon: cardIcon2,
+      amount: 50000,
+      seedFunding: "50K Seed funding",
+      seriesFunding: "25K Series funding",
+      maxFunding: "250K Max funding",
+      testFee: 475,
+    },
+  ];
+
+  const advancedTiers = [
+    {
+      icon: cardIcon1,
+      amount: 100000,
+      seedFunding: "100K Seed funding",
+      seriesFunding: "50K Series funding",
+      maxFunding: "500K Max funding",
+      testFee: 925,
+    },
+    {
+      icon: cardIcon2,
+      amount: 200000,
+      seedFunding: "200K Seed funding",
+      seriesFunding: "100K Series funding",
+      maxFunding: "1M Max funding",
+      testFee: 1825,
+    },
+    {
+      icon: cardIcon3,
+      amount: 300000,
+      seedFunding: "300K Seed funding",
+      seriesFunding: "150K Series funding",
+      maxFunding: "1.5M Max funding",
+      testFee: 2725,
+    },
+    {
+      icon: cardIcon1,
+      amount: 400000,
+      seedFunding: "400K Seed funding",
+      seriesFunding: "200K Series funding",
+      maxFunding: "2M Max funding",
+      testFee: 3625,
+    },
+    {
+      icon: cardIcon2,
+      amount: 500000,
+      seedFunding: "500K Seed funding",
+      seriesFunding: "250K Series funding",
+      maxFunding: "2.5M Max funding",
+      testFee: 4475,
+    },
+  ];
+
   return (
     <div className="pt-8 pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
-    <div className="max-w-7xl mx-auto">
-      <h1 className="text-4xl md:text-5xl mb-10 text-center md:text-left font-inter">
-        <span className="text-[#2e3b7d]">Choose your </span>
-        <span className="text-[#6cb6ff]">seed capital</span>
-      </h1>
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between mb-8">
+          <h1 className="text-4xl md:text-5xl text-center md:text-left font-inter">
+            <span className="text-[#2e3b7d]">Choose your </span>
+            <span className="text-[#6cb6ff]">seed capital</span>
+          </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {/* $10000 Tier */}
-        <div className="bg-white rounded-3xl shadow-lg p-6 relative">
-          <div className="flex justify-between items-start mb-8">
-            <div className="bg-[#e1e8f7] p-3 rounded-xl">
-              <div className="w-8 h-8 bg-[#6cb6ff] rounded-full"></div>
-            </div>
-            <div className="text-[#2e3b7d] text-3xl font-bold">$10000</div>
+          {/* Tab Buttons */}
+          <div className="flex justify-end gap-4 mb-8 font-inter">
+            <button
+              onClick={() => setActiveTab("basic")}
+              className={`px-6 py-2 rounded-xl transition-all duration-300 ${
+                activeTab === "basic"
+                  ? "bg-[#6cb6ff] text-white"
+                  : "border border-[#e1e8f7] text-[#2e3b7d] hover:bg-[#e1e8f7]"
+              }`}
+            >
+              Basic
+            </button>
+            <button
+              onClick={() => setActiveTab("advanced")}
+              className={`px-6 py-2 rounded-xl transition-all duration-300 ${
+                activeTab === "advanced"
+                  ? "bg-[#6cb6ff] text-white"
+                  : "border border-[#e1e8f7] text-[#2e3b7d] hover:bg-[#e1e8f7]"
+              }`}
+            >
+              Advanced
+            </button>
           </div>
-
-          <div className="space-y-4 mb-8">
-            <div className="flex items-center">
-              <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
-              </div>
-              <span className="text-[#2e3b7d] text-lg">10K Seed funding</span>
-            </div>
-            <div className="flex items-center">
-              <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
-              </div>
-              <span className="text-[#2e3b7d] text-lg">5K Series funding</span>
-            </div>
-            <div className="flex items-center">
-              <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
-              </div>
-              <span className="text-[#2e3b7d] text-lg">25K Max funding</span>
-            </div>
-          </div>
-
-          <div className="flex justify-between items-center mb-6">
-            <span className="text-[#2e3b7d] text-xl font-medium">Test fee:</span>
-            <span className="text-[#2e3b7d] text-2xl font-bold">$125</span>
-          </div>
-
-          <button className="w-full bg-[#6cb6ff] text-white py-4 rounded-full text-lg font-medium hover:bg-[#5aa0ff] transition-colors">
-            Start Test
-          </button>
         </div>
 
-        {/* $20000 Tier */}
-        <div className="bg-white rounded-3xl shadow-lg p-6 relative">
-          <div className="flex justify-between items-start mb-8">
-            <div className="bg-[#e1e8f7] p-3 rounded-xl">
-              <div className="w-8 h-8 flex">
-                <div className="w-4 h-4 bg-[#6cb6ff] rounded-full mr-1"></div>
-                <div className="w-4 h-4 bg-[#6cb6ff] rounded-full"></div>
-              </div>
-            </div>
-            <div className="text-[#2e3b7d] text-3xl font-bold">$20000</div>
-          </div>
+        <div className="mb-8">
+          {isLoading ? (
+            // Skeleton loading cards
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-[46px] custom-shadow p-6"
+                >
+                  {/* Icon and Amount row */}
+                  <div className="flex justify-between items-start mb-8">
+                    <div className="bg-[#e1e8f7] p-3 rounded-2xl w-14 h-14 animate-pulse" />
+                    <div className="h-8 w-24 bg-[#e1e8f7] rounded-lg animate-pulse" />
+                  </div>
 
-          <div className="space-y-4 mb-8">
-            <div className="flex items-center">
-              <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
-              </div>
-              <span className="text-[#2e3b7d] text-lg">20K Seed funding</span>
-            </div>
-            <div className="flex items-center">
-              <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
-              </div>
-              <span className="text-[#2e3b7d] text-lg">10K Series funding</span>
-            </div>
-            <div className="flex items-center">
-              <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
-              </div>
-              <span className="text-[#2e3b7d] text-lg">50K Max funding</span>
-            </div>
-          </div>
+                  {/* Features list */}
+                  <div className="space-y-4 mb-8">
+                    {[1, 2, 3].map((j) => (
+                      <div key={j} className="flex items-center">
+                        <div className="w-6 h-6 bg-[#e1e8f7] rounded-full mr-3 animate-pulse" />
+                        <div className="h-6 w-32 bg-[#e1e8f7] rounded-lg animate-pulse" />
+                      </div>
+                    ))}
+                  </div>
 
-          <div className="flex justify-between items-center mb-6">
-            <span className="text-[#2e3b7d] text-xl font-medium">Test fee:</span>
-            <span className="text-[#2e3b7d] text-2xl font-bold">$225</span>
-          </div>
+                  {/* Test fee row */}
+                  <div className="flex justify-between items-center mb-6">
+                    <div className="h-6 w-20 bg-[#e1e8f7] rounded-lg animate-pulse" />
+                    <div className="h-6 w-16 bg-[#e1e8f7] rounded-lg animate-pulse" />
+                  </div>
 
-          <button className="w-full bg-[#6cb6ff] text-white py-4 rounded-full text-lg font-medium hover:bg-[#5aa0ff] transition-colors">
-            Start Test
-          </button>
+                  {/* Button */}
+                  <div className="w-full h-[46px] bg-[#e1e8f7] rounded-2xl animate-pulse" />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={24}
+              navigation={false}
+              pagination={{ clickable: true }}
+              className="pricing-swiper"
+              initialSlide={0}
+              slidesPerView={1}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+            >
+              {(activeTab === "basic" ? basicTiers : advancedTiers).map(
+                (tier, index) => (
+                  <SwiperSlide key={index}>
+                    <PricingCard {...tier} />
+                  </SwiperSlide>
+                )
+              )}
+            </Swiper>
+          )}
         </div>
 
-        {/* $50000 Tier */}
-        <div className="bg-white rounded-3xl shadow-lg p-6 relative">
-          <div className="flex justify-between items-start mb-8">
-            <div className="bg-[#e1e8f7] p-3 rounded-xl">
-              <div className="w-8 h-8 flex flex-wrap">
-                <div className="w-4 h-4 bg-[#6cb6ff] rounded-full mr-1 mb-1"></div>
-                <div className="w-4 h-4 bg-[#6cb6ff] rounded-full"></div>
-                <div className="w-4 h-4 bg-[#6cb6ff] rounded-full"></div>
-              </div>
-            </div>
-            <div className="text-[#2e3b7d] text-3xl font-bold">$50000</div>
-          </div>
-
-          <div className="space-y-4 mb-8">
+        {/* Features Section */}
+        <div className="bg-white rounded-3xl shadow-lg p-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
+                <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">50K Seed funding</span>
+              <span className="text-[#2e3b7d] text-lg">1-stage evaluation</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
+                <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">25K Series funding</span>
+              <span className="text-[#2e3b7d] text-lg">12% profit target</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
-                <Check size={20} />
+                <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">250K Max funding</span>
+              <span className="text-[#2e3b7d] text-lg">4% daily drawdown</span>
             </div>
-          </div>
-
-          <div className="flex justify-between items-center mb-6">
-            <span className="text-[#2e3b7d] text-xl font-medium">Test fee:</span>
-            <span className="text-[#2e3b7d] text-2xl font-bold">$475</span>
-          </div>
-
-          <button className="w-full bg-[#6cb6ff] text-white py-4 rounded-full text-lg font-medium hover:bg-[#5aa0ff] transition-colors">
-            Start Test
-          </button>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="bg-white rounded-3xl shadow-lg p-8 mt-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
+            <div className="flex items-center">
+              <div className="text-[#6cb6ff] mr-3">
+                <Image src={confirmIcon} alt="checked-icon" />
+              </div>
+              <span className="text-[#2e3b7d] text-lg">Scale every30 days</span>
             </div>
-            <span className="text-[#2e3b7d] text-lg">1-stage evaluation</span>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
+            <div className="flex items-center">
+              <div className="text-[#6cb6ff] mr-3">
+                <Image src={confirmIcon} alt="checked-icon" />
+              </div>
+              <span className="text-[#2e3b7d] text-lg">
+                Up to 90% profit share
+              </span>
             </div>
-            <span className="text-[#2e3b7d] text-lg">12% profit target</span>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
+            <div className="flex items-center">
+              <div className="text-[#6cb6ff] mr-3">
+                <Image src={confirmIcon} alt="checked-icon" />
+              </div>
+              <span className="text-[#2e3b7d] text-lg">8% max drawdown</span>
             </div>
-            <span className="text-[#2e3b7d] text-lg">4% daily drawdown</span>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
+            <div className="flex items-center">
+              <div className="text-[#6cb6ff] mr-3">
+                <Image src={confirmIcon} alt="checked-icon" />
+              </div>
+              <span className="text-[#2e3b7d] text-lg">
+                No time constraints
+              </span>
             </div>
-            <span className="text-[#2e3b7d] text-lg">Scale every30 days</span>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
+            <div className="flex items-center">
+              <div className="text-[#6cb6ff] mr-3">
+                <Image src={confirmIcon} alt="checked-icon" />
+              </div>
+              <span className="text-[#2e3b7d] text-lg">
+                No expensive add-ons
+              </span>
             </div>
-            <span className="text-[#2e3b7d] text-lg">Up to 90% profit share</span>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
-            </div>
-            <span className="text-[#2e3b7d] text-lg">8% max drawdown</span>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
-            </div>
-            <span className="text-[#2e3b7d] text-lg">No time constraints</span>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[#6cb6ff] mr-3">
-              <Check size={20} />
-            </div>
-            <span className="text-[#2e3b7d] text-lg">No expensive add-ons</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default Plan
+export default Plan;

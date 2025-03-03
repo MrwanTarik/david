@@ -1,13 +1,14 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import islandImage from "@/public/assets/is.svg"
 
 export default function HeroSection() {
   return (
-    <div className="py-12 px-4 md:py-20 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
+    <div className="relative mt-[118px] py-12 px-4 md:py-20 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
       <div className="bg-[#f8faff] rounded-[40px] shadow-[0_8px_40px_rgba(0,0,0,0.08)] p-8 md:p-12 flex flex-col items-center">
-        <div className="relative w-full max-w-[600px] h-[300px] md:h-[400px] mb-8">
+        <div className="absolute bottom-[370px] w-full h-[300px] md:h-[480px] mb-8">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Only_Trades-ovZn7xOpobBMKOy5PA4wSbu2zdKfgN.png"
+            src={islandImage}
             alt="Trading platform illustration"
             fill
             className="object-contain"
@@ -15,7 +16,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="text-center max-w-[800px] mx-auto">
+        <div className="text-center max-w-[800px] mt-[200px] mx-auto">
           <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#2e3b7d] mb-6 leading-tight">
             Lorem ipsum dolor sit amet consectetur.
           </h1>
