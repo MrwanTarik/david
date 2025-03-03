@@ -38,13 +38,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center space-x-4 z-10">
-          <Button asChild className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white rounded-[15px] px-6 w-[123px] h-[46px] flex justify-center items-center font-inter button-shadow">
+        <div className="flex items-center space-x-4 z-10 menu-icon-login">
+          <Button asChild className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white rounded-[15px] px-6 w-[123px] h-[46px] flex justify-center items-center font-inter">
             <Link href="#">Log In</Link>
           </Button>
 
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu} aria-label="Toggle menu">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <Button variant="ghost" size="icon" className="md:hidden " onClick={toggleMenu} aria-label="Toggle menu">
+            {isMenuOpen ? <X size={ 30} /> : <Menu size={30} />}
           </Button>
         </div>
       </div>

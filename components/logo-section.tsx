@@ -11,7 +11,7 @@ export default function LogoSection() {
   return (
     <div className="w-full pb-8">
       <div className="max-w-[1440px] mx-auto ">
-        <div className="relative w-full max-w-[800px] h-[400px] mx-auto">
+        <div className="relative w-full max-w-[800px] hero-logo-section h-[400px] mx-auto">
           <div className="absolute inset-0">
             <Image
               src={halfCircle}

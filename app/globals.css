@@ -150,6 +150,7 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 body {
   background-color: #f3f7fc;
 }
@@ -295,7 +296,10 @@ body {
 .testimonials-swiper .testimonial-regular {
   width: 477px !important;
 }
-
+.menu-icon-login button:nth-child(2) svg {
+  width: 27px;
+  height: 27px;
+}
 /* Responsive styles */
 @media (max-width: 1024px) {
   .testimonials-swiper .testimonial-excellent {
@@ -312,6 +316,12 @@ body {
   }
   .testimonials-swiper .testimonial-regular {
     width: 70% !important;
+  }
+  body::before {
+    display: none;
+  }
+  .hero-logo-section {
+    height: 270px !important;
   }
 }
 

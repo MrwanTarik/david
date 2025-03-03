@@ -54,19 +54,19 @@ export default function FAQSection() {
 
   return (
     <div className="py-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-        <div className="md:w-1/3">
-          <h2 className="text-[40px] md:text-[48px] font-bold text-[#2e3b7d] mb-8">Frequently asked Questions</h2>
+      <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+        <div className="md:w-[40%]">
+          <h2 className="text-[32px] md:text-[40px] lg:text-[48px] text-[#2e3b7d] mb-8 font-violet-sans  font-normal text-center md:text-left">Frequently asked Questions</h2>
 
           <Button
             onClick={() => setShowAll(!showAll)}
-            className="bg-[#39b4ff] hover:bg-[#2ea3ee] text-white font-medium px-8 py-6 h-auto text-[18px] rounded-full"
+            className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white font-normal w-[150px] md:w-[242px] h-[50px] md:h-[73px] flex justify-center items-center text-[16px] md:text-[18px] rounded-[16px] font-inter mx-auto md:mx-0"
           >
             {showAll ? "Show Less" : "See More"}
           </Button>
         </div>
 
-        <div className="md:w-2/3 space-y-6">
+        <div className="md:w-[55%] space-y-6">
           {visibleFaqs.map((faq, index) => (
             <div
               key={index}
@@ -76,7 +76,7 @@ export default function FAQSection() {
                 onClick={() => toggleFaq(index)}
                 className="w-full text-left p-6 flex justify-between items-center"
               >
-                <h3 className="text-[20px] font-semibold text-[#2e3b7d]">{faq.question}</h3>
+                <h3 className="text-[20px] font-normal text-[#2e3b7d] font-violet-sans">{faq.question}</h3>
                 <ChevronDown
                   className={`text-[#39b4ff] transition-transform duration-300 ${expandedIndex === index ? "rotate-180" : ""}`}
                   size={24}
@@ -89,7 +89,7 @@ export default function FAQSection() {
                 }`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-[#2e3b7d] leading-relaxed">{faq.answer}</p>
+                  <p className="text-[#2e3b7d] leading-relaxed font-poppins font-normal">{faq.answer}</p>
                 </div>
               </div>
             </div>

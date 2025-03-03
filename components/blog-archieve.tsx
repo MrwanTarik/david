@@ -30,8 +30,8 @@ const blogPosts = [
 
 export default function BlogArchieve() {
   return (
-    <div className="py-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
-      <h2 className="text-center text-[40px] md:text-[48px] font-violet-sans text-[#2e3b7d] mb-16">
+    <div className="py-8 md:py-12 lg:py-16  px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
+      <h2 className="text-center text-[32px] md:text-[40px] lg:text-[48px] font-violet-sans text-[#2e3b7d] mb-8 md:mb-12">
         Blog Archive
       </h2>
 
@@ -57,9 +57,10 @@ export default function BlogArchieve() {
               <p className="text-[#2e3b7d] mb-6 flex-grow">{post.excerpt}</p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="text-center py-3 px-6 border border-[rgba(0, 0, 0, 0.16)] rounded-2xl text-[#2e3b7d] hover:bg-[#f8faff] transition-colors"
+                className="relative text-center py-3 px-6 border border-[rgba(0, 0, 0, 0.16)] rounded-2xl text-[#2e3b7d] transition-all duration-300 group overflow-hidden hover:border-transparent"
               >
-                Read More
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Read More</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
               </Link>
             </div>
           </div>

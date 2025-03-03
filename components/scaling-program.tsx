@@ -9,7 +9,7 @@ export default function ScalingProgram() {
   const fundingAmounts = ["10k", "20k", "50k", "100k", "200k"];
 
   return (
-    <div className="py-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
+    <div className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
       <p className="text-center text-[#6CB6FF] mb-8">You invoice, we pay</p>
 
       <p className="text-center text-[#2e3b7d] max-w-[800px] mx-auto mb-[120px] leading-relaxed ">
@@ -40,11 +40,11 @@ export default function ScalingProgram() {
             className="bg-[#f8faff] rounded-[32px]  custom-shadow p-6 md:px-16 md:py-8"
           >
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
-              <div className="text-[#2e3b7d] mb-4 md:mb-0 w-full md:w-1/6">
+              <div className="text-[#2e3b7d] text-center md:text-left mb-4 md:mb-0 w-full md:w-1/6">
                 {series.name}
               </div>
 
-              <div className="flex flex-wrap md:flex-nowrap justify-between w-full md:w-5/6">
+              <div className="flex flex-wrap md:flex-nowrap justify-between w-full md:w-5/6 items-center md:items-start md:flex-row">
                 {fundingAmounts.map((amount, index) => (
                   <div
                     key={index}

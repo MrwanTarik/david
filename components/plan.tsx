@@ -112,17 +112,17 @@ const Plan = () => {
   return (
     <div className="pt-8 pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between mb-8">
-          <h1 className="text-4xl md:text-5xl text-center md:text-left font-inter">
+        <div className="flex-col sm:flex-row flex justify-between sm:mb-8 gap-5">
+          <h1 className="text-[32px] md:text-[40px] lg:text-[48px] text-center md:text-left font-inter">
             <span className="text-[#2e3b7d]">Choose your </span>
             <span className="text-[#6cb6ff]">seed capital</span>
           </h1>
 
           {/* Tab Buttons */}
-          <div className="flex justify-end gap-4 mb-8 font-inter">
+          <div className="flex justify-center sm:justify-end gap-4 font-inter">
             <button
               onClick={() => setActiveTab("basic")}
-              className={`px-6 py-2 rounded-xl transition-all duration-300 ${
+              className={`px-6 py-2 flex-1 sm:flex-auto w-auto sm:w-[125px] rounded-xl transition-all duration-300 ${
                 activeTab === "basic"
                   ? "bg-[#6cb6ff] text-white"
                   : "border border-[#e1e8f7] text-[#2e3b7d] hover:bg-[#e1e8f7]"
@@ -132,7 +132,7 @@ const Plan = () => {
             </button>
             <button
               onClick={() => setActiveTab("advanced")}
-              className={`px-6 py-2 rounded-xl transition-all duration-300 ${
+              className={`px-6 py-2 flex-1 sm:flex-auto rounded-xl transition-all duration-300 ${
                 activeTab === "advanced"
                   ? "bg-[#6cb6ff] text-white"
                   : "border border-[#e1e8f7] text-[#2e3b7d] hover:bg-[#e1e8f7]"
@@ -185,7 +185,7 @@ const Plan = () => {
               spaceBetween={24}
               navigation={false}
               pagination={{ clickable: true }}
-              className="pricing-swiper"
+              className="pricing-swiper !px-0"
               initialSlide={0}
               slidesPerView={1}
               breakpoints={{
@@ -212,61 +212,55 @@ const Plan = () => {
         </div>
 
         {/* Features Section */}
-        <div className="bg-white rounded-3xl shadow-lg p-8 mt-8">
+        <div className="bg-white rounded-3xl custom-shadow p-8 mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">1-stage evaluation</span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">1-stage evaluation</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">12% profit target</span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">12% profit target</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">4% daily drawdown</span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">4% daily drawdown</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">Scale every30 days</span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">Scale every30 days</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">
-                Up to 90% profit share
-              </span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">Up to 90% profit share</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">8% max drawdown</span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">8% max drawdown</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">
-                No time constraints
-              </span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">No time constraints</span>
             </div>
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">
                 <Image src={confirmIcon} alt="checked-icon" />
               </div>
-              <span className="text-[#2e3b7d] text-lg">
-                No expensive add-ons
-              </span>
+              <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">No expensive add-ons</span>
             </div>
           </div>
         </div>
