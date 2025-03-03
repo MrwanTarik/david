@@ -10,7 +10,7 @@ import fifthLogo from "@/public/assets/logo-5.svg"
 export default function LogoSection() {
   return (
     <div className="w-full pb-8">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto ">
       <div className="relative w-full max-w-[800px] h-[400px] mx-auto">
           <Image
             src="/assets/planet.png"
@@ -20,7 +20,7 @@ export default function LogoSection() {
             priority
           />
         </div>
-        <div className="bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.08)] py-6 px-4 relative bottom-[70px]">
+        <div className="bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.08)] py-6 px-4 relative bottom-[70px] custom-shadow">
           <div className="flex w-[83%] mx-auto flex-wrap justify-center md:justify-between items-center gap-6 md:gap-4">
             <div className="flex items-center gap-2 ">
               <Image src={firstLogo} alt="logo-1" />

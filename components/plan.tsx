@@ -4,7 +4,7 @@ const Plan = () => {
   return (
     <div className="pt-8 pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
     <div className="max-w-7xl mx-auto">
-      <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center md:text-left">
+      <h1 className="text-4xl md:text-5xl mb-10 text-center md:text-left font-inter">
         <span className="text-[#2e3b7d]">Choose your </span>
         <span className="text-[#6cb6ff]">seed capital</span>
       </h1>

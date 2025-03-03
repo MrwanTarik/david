@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header className=" pb-5 pt-7 px-4 md:px-8 lg:px-20 relative ">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-        <Link href="/" className="text-[#2e3b7d] text-[32px] font-bold z-10">
+        <Link href="/" className="text-[#2e3b7d] text-[32px] font-inter font-bold z-10">
           LOGO
         </Link>
 
@@ -39,7 +39,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center space-x-4 z-10">
-          <Button asChild className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white rounded-[15px] px-6 w-[123px] h-[46px] flex justify-center items-center">
+          <Button asChild className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white rounded-[15px] px-6 w-[123px] h-[46px] flex justify-center items-center font-inter button-shadow">
             <Link href="#">Log In</Link>
           </Button>
 
