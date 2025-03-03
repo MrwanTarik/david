@@ -1,4 +1,17 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* local font VioletSans */
+@font-face {
+  font-family: "Violet Sans";
+  src: url("../public/fonts/VioletSans-Regular.woff2") format("woff2"),
+    url("../public/fonts/VioletSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "tailwindcss";
+
 
 @plugin "tailwindcss-animate";
 
@@ -112,6 +125,10 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-inter: "Inter", "sans-serif";
+  --font-opensans: "Open Sans", "sans-serif";
+  --font-poppins: "Poppins", "sans-serif";
+  --font-violet-sans: "Violet Sans", "sans-serif";
 }
 
 @layer base {
@@ -119,7 +136,24 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins ;
+
   }
 }
 
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/hero-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body {
+  background-color: #F3F7FC;
+}

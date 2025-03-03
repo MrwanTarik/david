@@ -2,7 +2,7 @@ import React from 'react'
 import { Check } from 'lucide-react'
 const Plan = () => {
   return (
-    <div className="min-h-screen bg-white p-6 md:p-12">
+    <div className="pt-8 pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
     <div className="max-w-7xl mx-auto">
       <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center md:text-left">
         <span className="text-[#2e3b7d]">Choose your </span>

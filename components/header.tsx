@@ -24,22 +24,22 @@ export default function Header() {
   }, [isMenuOpen])
 
   return (
-    <header className="bg-[#f3f7fc] py-4 px-4 md:px-8 lg:px-20 relative z-50">
+    <header className=" pb-5 pt-7 px-4 md:px-8 lg:px-20 relative ">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-        <Link href="/" className="text-[#2e3b7d] text-[32px] font-bold">
+        <Link href="/" className="text-[#2e3b7d] text-[32px] font-bold z-10">
           LOGO
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
           {["Inner Page", "Inner Page", "Inner Page", "Inner Page", "Inner Page"].map((item, index) => (
-            <Link key={index} href="#" className="text-[#2e3b7d] hover:text-[#39b4ff] transition-colors">
+            <Link key={index} href="#" className="text-[#2e3b7d] z-10 hover:text-[#39b4ff] transition-colors">
               {item}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center space-x-4">
-          <Button asChild className="bg-[#39b4ff] hover:bg-[#2ea3ee] text-white rounded-full px-6">
+        <div className="flex items-center space-x-4 z-10">
+          <Button asChild className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white rounded-[15px] px-6 w-[123px] h-[46px] flex justify-center items-center">
             <Link href="#">Log In</Link>
           </Button>
 
@@ -51,7 +51,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden absolute left-0 right-0 top-full bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`md:hidden absolute left-0 right-0 top-full z-20 bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
           isMenuOpen ? "max-h-[300px] mx-[20px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >

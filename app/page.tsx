@@ -11,10 +11,11 @@ import CTASection from "@/components/cta-section"
 import Footer from "@/components/footer"
 import HeroSection from "@/components/hero-section"
 import LogoSection from "@/components/logo-section"
+
 export default function Home() {
   return (
     <>
-    <main className=" relative z-0">
+    <main className="">
     <HeroSection />
     <Plan />
     <Testimonials />
