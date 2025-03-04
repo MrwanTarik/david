@@ -3,7 +3,7 @@ import Image from "next/image"
 import Facebook from "@/public/assets/icons/Facebook.svg"
 import Youtube from "@/public/assets/icons/Youtube.svg"
 import Twitter from "@/public/assets/icons/Twitter.svg"
-import Linkedin from "@/public/assets/icons/Linkedin.svg"
+import Linkedin from "@/public/assets/icons/linkedin.svg"
 
 export default function Footer() {
   return (
