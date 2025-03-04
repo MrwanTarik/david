@@ -195,8 +195,6 @@ body {
   animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-
-
 .pricing-swiper .swiper-pagination-bullet {
   width: 8px;
   height: 8px;

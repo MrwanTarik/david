@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ctaBg from "@/public/assets/cta-bg.png";
-
 export default function CTASection() {
   return (
     <div className="relative">
