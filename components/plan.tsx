@@ -112,14 +112,20 @@ const Plan = () => {
   return (
     <div className="pt-8 pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
       <div className="max-w-7xl mx-auto">
-        <div className="flex-col sm:flex-row flex justify-between sm:mb-8 gap-5">
+        <div 
+          data-aos="fade-up"
+          className="flex-col sm:flex-row flex justify-between items-center sm:mb-8 gap-5"
+        >
           <h1 className="text-[32px] md:text-[40px] lg:text-[48px] text-center md:text-left font-inter">
             <span className="text-[#2e3b7d]">Choose your </span>
             <span className="text-[#6cb6ff]">seed capital</span>
           </h1>
 
-          {/* Tab Buttons */}
-          <div className="flex justify-center sm:justify-end gap-4 font-inter">
+          <div 
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="flex justify-center sm:justify-end gap-4 font-inter"
+          >
             <button
               onClick={() => setActiveTab("basic")}
               className={`px-6 py-2 flex-1 sm:flex-auto w-auto sm:w-[125px] rounded-xl transition-all duration-300 ${
@@ -143,7 +149,11 @@ const Plan = () => {
           </div>
         </div>
 
-        <div className="mb-8">
+        <div 
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="mb-8"
+        >
           {isLoading ? (
             // Skeleton loading cards
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -212,7 +222,11 @@ const Plan = () => {
         </div>
 
         {/* Features Section */}
-        <div className="bg-white rounded-3xl custom-shadow p-8 mt-8">
+        <div 
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="bg-white rounded-3xl custom-shadow p-8 mt-8"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center">
               <div className="text-[#6cb6ff] mr-3">

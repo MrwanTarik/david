@@ -61,19 +61,27 @@ const bottomFeature = {
 export default function FeaturesGrid() {
   return (
     <div className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
-      <h2 className="text-center text-[32px] md:text-[40px] lg:text-[48px]font-violet-sans mb-8 md:mb-12">
+      <h2 
+        data-aos="fade-down"
+        className="text-center text-[32px] md:text-[40px] lg:text-[48px] font-violet-sans mb-8 md:mb-12"
+      >
         <span className="text-[#6CB6FF]">PipFarm</span>
         <span className="text-[#2E3B7D]"> in a nutshell</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {features.map((feature, index) => (
-          <FeatureCard
+          <div
             key={index}
-            title={feature.title}
-            description={feature.description}
-            iconSrc={feature.iconSrc}
-          />
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <FeatureCard
+              title={feature.title}
+              description={feature.description}
+              iconSrc={feature.iconSrc}
+            />
+          </div>
         ))}
       </div>
 

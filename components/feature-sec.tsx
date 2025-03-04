@@ -55,10 +55,17 @@ export default function FAQSection() {
   return (
     <div className="py-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-        <div className="md:w-[40%]">
-          <h2 className="text-[32px] md:text-[40px] lg:text-[48px] text-[#2e3b7d] mb-8 font-violet-sans  font-normal text-center md:text-left">Frequently asked Questions</h2>
+        <div 
+          data-aos="fade-right"
+          className="md:w-[40%]"
+        >
+          <h2 className="text-[32px] md:text-[40px] lg:text-[48px] text-[#2e3b7d] mb-8 font-violet-sans font-normal text-center md:text-left">
+            Frequently asked Questions
+          </h2>
 
           <Button
+            data-aos="fade-up"
+            data-aos-delay="200"
             onClick={() => setShowAll(!showAll)}
             className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white font-normal w-[150px] md:w-[242px] h-[50px] md:h-[73px] flex justify-center items-center text-[16px] md:text-[18px] rounded-[16px] font-inter mx-auto md:mx-0"
           >
@@ -70,6 +77,8 @@ export default function FAQSection() {
           {visibleFaqs.map((faq, index) => (
             <div
               key={index}
+              data-aos="fade-left"
+              data-aos-delay={index * 100}
               className="bg-[#f8faff] rounded-[24px] shadow-[0_8px_30px_rgba(0,0,0,0.06)] overflow-hidden"
             >
               <button

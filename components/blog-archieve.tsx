@@ -30,16 +30,21 @@ const blogPosts = [
 
 export default function BlogArchieve() {
   return (
-    <div className="py-8 md:py-12 lg:py-16  px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
-      <h2 className="text-center text-[32px] md:text-[40px] lg:text-[48px] font-violet-sans text-[#2e3b7d] mb-8 md:mb-12">
+    <div className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
+      <h2 
+        data-aos="fade-down"
+        className="text-center text-[32px] md:text-[40px] lg:text-[48px] font-violet-sans text-[#2e3b7d] mb-8 md:mb-12"
+      >
         Blog Archive
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogPosts.map((post) => (
+        {blogPosts.map((post, index) => (
           <div
             key={post.id}
-            className="bg-white rounded-[32px]  custom-shadow overflow-hidden flex flex-col"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            className="bg-white rounded-[32px] custom-shadow overflow-hidden flex flex-col"
           >
             <div className="relative h-[260px] w-full">
               <Image

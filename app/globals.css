@@ -153,6 +153,7 @@ body::before {
 
 body {
   background-color: #f3f7fc;
+  overflow-x: hidden;
 }
 
 .custom-shadow {

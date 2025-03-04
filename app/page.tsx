@@ -1,3 +1,7 @@
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Plan from "@/components/plan"
 import Testimonials from "@/components/testimonials"
 import Features from "@/components/features"
@@ -13,6 +17,14 @@ import HeroSection from "@/components/hero-section"
 import LogoSection from "@/components/logo-section"
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <>
     <main className="">

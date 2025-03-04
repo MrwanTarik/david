@@ -39,6 +39,8 @@ export default function HowItWorks() {
         {steps.map((step, index) => (
           <div
             key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 200}
             className="relative flex flex-col items-start mb-16 md:mb-0 md:w-1/4"
           >
             {/* Number circle */}

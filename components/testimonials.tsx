@@ -44,7 +44,10 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <div className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
-      <div className="flex  justify-between items-start sm:items-center mb-8 md:mb-12">
+      <div 
+        data-aos="fade-right"
+        className="flex justify-between items-start sm:items-center mb-8 md:mb-12"
+      >
         <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-violet-sans text-[#2e3b7d]">
           Testimonials
         </h2>
@@ -64,7 +67,11 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="max-w-[1280px] mx-auto">
+      <div 
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="max-w-[1280px] mx-auto"
+      >
         <Swiper
           modules={[Navigation]}
           spaceBetween={16}
