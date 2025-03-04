@@ -2,12 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ctaBg from "@/public/assets/cta-bg.png";
-
 export default function CTASection() {
   return (
    <>
    <div className="relative">
-   <div className=" absolute w-[50%] top-[40%] translate-y-[-50%] right-0 hidden md:block">
+   <div className="absolute w-[50%] top-[40%] translate-y-[-50%] right-0 hidden md:block">
           <Image className="w-full h-[637px] object-contain" src={ctaBg} alt="Blue crystal shapes with clouds" />
         </div>
    <div className="py-8 md:py-12 lg:py-16 pl-4 md:pl-8 lg:pl-20 max-w-[1440px] mx-auto md:mt-15 md:mb-30">
