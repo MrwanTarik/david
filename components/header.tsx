@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import logo from "@/public/assets/logo.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,22 +26,23 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className=" pb-5 pt-7 px-4 md:px-8 lg:px-20 relative ">
+    <header className="pt-8 pb-5 md:pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative   ">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         <Link
           href="/"
-          className="text-[#2e3b7d] text-[32px] font-inter font-bold z-10"
+          className="text-[#2e3b7d] text-[32px] font-inter font-bold z-10 flex items-center gap-2"
         >
-          LOGO
+          <Image src={logo} alt="Logo" className="w-[65px] h-[65px]" />
+          <span className="text-[#14AAF5] text-[20px] font-violet-sans z-10 md:block hidden ">Only Trades</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
           {[
-            "Inner Page",
-            "Inner Page",
-            "Inner Page",
-            "Inner Page",
-            "Inner Page",
+            "Home",
+            "Products",
+            "Be a Partner",
+            "FAQ",
+            "Client Area",
           ].map((item, index) => (
             <Link
               key={index}
@@ -56,7 +59,7 @@ export default function Header() {
             asChild
             className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white rounded-[15px] px-6 w-[123px] h-[46px] flex justify-center items-center font-inter"
           >
-            <Link href="#">Log In</Link>
+            <Link href="#">Dashboard</Link>
           </Button>
 
           <Button
@@ -81,11 +84,11 @@ export default function Header() {
       >
         <nav className="px-4 py-2">
           {[
-            "Inner Page",
-            "Inner Page",
-            "Inner Page",
-            "Inner Page",
-            "Inner Page",
+            "Home",
+            "Products",
+            "Be a Partner",
+            "FAQ",
+            "Client Area",
           ].map((item, index) => (
             <Link
               key={index}

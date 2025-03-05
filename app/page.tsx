@@ -30,13 +30,13 @@ export default function Home() {
       <main className="">
         <HeroSection />
         <Plan />
-        <Testimonials />
-        <Features />
+        {/* <Testimonials /> */}
+        {/* <Features /> */}
         <HowItWorks />
         <About />
-        <PayoutProcess />
-        <ScalingProgram />
-        <BlogArchieve />
+        {/* <PayoutProcess /> */}
+        {/* <ScalingProgram /> */}
+        {/* <BlogArchieve /> */}
         <FAQSection />
         <CTASection />
       </main>

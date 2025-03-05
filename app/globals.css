@@ -138,7 +138,7 @@
   }
 }
 
-body::before {
+/* body::before {
   content: "";
   position: absolute;
   top: -100px;
@@ -149,7 +149,7 @@ body::before {
   background-image: url("/assets/hero-bg.png");
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 body {
   background-color: #f3f7fc;
@@ -169,6 +169,7 @@ body {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  
 }
 
 .gradient-blue-button:hover {

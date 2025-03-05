@@ -129,8 +129,8 @@ const Plan = () => {
             className="flex-col sm:flex-row flex justify-between items-center sm:mb-8 gap-5"
           >
             <h1 className="text-[32px] md:text-[40px] lg:text-[48px] text-center md:text-left font-inter">
-              <span className="text-[#2e3b7d]">Choose your </span>
-              <span className="text-[#6cb6ff]">seed capital</span>
+              <span className="text-[#2e3b7d]">Select Your Plan From </span>
+              <span className="text-[#6cb6ff]">Only Trades</span>
             </h1>
 
             <div
@@ -146,7 +146,7 @@ const Plan = () => {
                     : "border border-[#e1e8f7] text-[#2e3b7d] hover:bg-[#e1e8f7]"
                 }`}
               >
-                Basic
+                Two Step
               </button>
               <button
                 onClick={() => setActiveTab("advanced")}
@@ -156,7 +156,7 @@ const Plan = () => {
                     : "border border-[#e1e8f7] text-[#2e3b7d] hover:bg-[#e1e8f7]"
                 }`}
               >
-                Advanced
+                Instant Funding
               </button>
             </div>
           </div>
