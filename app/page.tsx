@@ -15,7 +15,8 @@ import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
 import LogoSection from "@/components/logo-section";
-
+import Earn from "@/components/earn";
+import OurProviders from "@/components/our-providers";
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -30,6 +31,7 @@ export default function Home() {
       <main className="">
         <HeroSection />
         <Plan />
+        <Earn />
         {/* <Testimonials /> */}
         {/* <Features /> */}
         <HowItWorks />
@@ -37,6 +39,7 @@ export default function Home() {
         {/* <PayoutProcess /> */}
         {/* <ScalingProgram /> */}
         {/* <BlogArchieve /> */}
+        <OurProviders />
         <FAQSection />
         <CTASection />
       </main>
