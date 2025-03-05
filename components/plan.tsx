@@ -29,85 +29,120 @@ const Plan = () => {
     {
       icon: cardIcon1,
       amount: 10000,
-      seedFunding: "20K Seed funding",
-      seriesFunding: "10K Series funding",
-      maxFunding: "50K Max funding",
-      testFee: 225,
+      virtualProfitTarget: "8% | 5%",
+      maxDrawdown: "10%",
+      maxDailyDrawdown: "4%",
+      minTradingDays: "5",
+      newsTrading: "YES",
+      profitSplit: "Up To 95%",
+      testFee: 159,
     },
     {
       icon: cardIcon2,
-      amount: 20000,
-      seedFunding: "20K Seed funding",
-      seriesFunding: "10K Series funding",
-      maxFunding: "50K Max funding",
-      testFee: 225,
+      amount: 25000,
+      virtualProfitTarget: "8% | 5%",
+      maxDrawdown: "10%",
+      maxDailyDrawdown: "4%",
+      minTradingDays: "5",
+      newsTrading: "YES",
+      profitSplit: "Up To 95%",
+      testFee: 289,
     },
     {
       icon: cardIcon3,
-      amount: 30000,
-      seedFunding: "30K Seed funding",
-      seriesFunding: "15K Series funding",
-      maxFunding: "150K Max funding",
-      testFee: 325,
+      amount: 50000,
+      virtualProfitTarget: "8% | 5%",
+      maxDrawdown: "10%",
+      maxDailyDrawdown: "4%",
+      minTradingDays: "5",
+      newsTrading: "YES",
+      profitSplit: "Up To 95%",
+      testFee: 479,
     },
     {
       icon: cardIcon1,
-      amount: 40000,
-      seedFunding: "40K Seed funding",
-      seriesFunding: "20K Series funding",
-      maxFunding: "200K Max funding",
-      testFee: 425,
+      amount: 100000,
+      virtualProfitTarget: "8% | 5%",
+      maxDrawdown: "10%",
+      maxDailyDrawdown: "4%",
+      minTradingDays: "5",
+      newsTrading: "YES",
+      profitSplit: "Up To 95%",
+      testFee: 799,
     },
     {
       icon: cardIcon2,
-      amount: 50000,
-      seedFunding: "50K Seed funding",
-      seriesFunding: "25K Series funding",
-      maxFunding: "250K Max funding",
-      testFee: 475,
+      amount: 200000,
+      virtualProfitTarget: "8% | 5%",
+      maxDrawdown: "10%",
+      maxDailyDrawdown: "4%",
+      minTradingDays: "5",
+      newsTrading: "YES",
+      profitSplit: "Up To 95%",
+      testFee: 1399,
     },
   ];
 
   const advancedTiers = [
     {
       icon: cardIcon1,
-      amount: 100000,
-      seedFunding: "100K Seed funding",
-      seriesFunding: "50K Series funding",
-      maxFunding: "500K Max funding",
-      testFee: 925,
+      amount: 2500,
+      virtualProfitTarget: "--",
+      maxDrawdown: "7%",
+      maxDailyDrawdown: "--",
+      minTradingDays: "10",
+      profitSplit: "Up To 90%",
+      testFee: 179,
     },
     {
       icon: cardIcon2,
-      amount: 200000,
-      seedFunding: "200K Seed funding",
-      seriesFunding: "100K Series funding",
-      maxFunding: "1M Max funding",
-      testFee: 1825,
+      amount: 5000,
+      virtualProfitTarget: "--",
+      maxDrawdown: "7%",
+      maxDailyDrawdown: "--",
+      minTradingDays: "10",
+      profitSplit: "Up To 90%",
+      testFee: 319,
     },
     {
       icon: cardIcon3,
-      amount: 300000,
-      seedFunding: "300K Seed funding",
-      seriesFunding: "150K Series funding",
-      maxFunding: "1.5M Max funding",
-      testFee: 2725,
+      amount: 10000,
+      virtualProfitTarget: "--",
+      maxDrawdown: "7%",
+      maxDailyDrawdown: "--",
+      minTradingDays: "10",
+      profitSplit: "Up To 90%",
+      testFee: 569,
     },
     {
       icon: cardIcon1,
-      amount: 400000,
-      seedFunding: "400K Seed funding",
-      seriesFunding: "200K Series funding",
-      maxFunding: "2M Max funding",
-      testFee: 3625,
+      amount: 25000,
+      virtualProfitTarget: "--",
+      maxDrawdown: "7%",
+      maxDailyDrawdown: "--",
+      minTradingDays: "10",
+      profitSplit: "Up To 90%",
+      testFee: 1199,
     },
     {
       icon: cardIcon2,
-      amount: 500000,
-      seedFunding: "500K Seed funding",
-      seriesFunding: "250K Series funding",
-      maxFunding: "2.5M Max funding",
-      testFee: 4475,
+      amount: 50000,
+      virtualProfitTarget: "--",
+      maxDrawdown: "7%",
+      maxDailyDrawdown: "--",
+      minTradingDays: "10",
+      profitSplit: "Up To 90%",
+      testFee: 2199,
+    },
+    {
+      icon: cardIcon3,
+      amount: 100000,
+      virtualProfitTarget: "--",
+      maxDrawdown: "7%",
+      maxDailyDrawdown: "--",
+      minTradingDays: "10",
+      profitSplit: "Up To 90%",
+      testFee: 4199,
     },
   ];
   return (
@@ -221,12 +256,25 @@ const Plan = () => {
                 {(activeTab === "basic" ? basicTiers : advancedTiers).map(
                   (tier, index) => (
                     <SwiperSlide key={index}>
-                      <PricingCard {...tier} />
+                      <PricingCard
+                        {...tier}
+                        isAdvanced={activeTab === "advanced"}
+                      />
                     </SwiperSlide>
                   )
                 )}
               </Swiper>
             )}
+          </div>
+
+          {/* Titles Section */}
+          <div className="text-center mb-8">
+            <h2 className="text-[#6cb6ff] text-[16px] md:text-[20px] mb-2">
+              KEY BENEFITS
+            </h2>
+            <h1 className="text-[#2e3b7d] text-[32px] md:text-[40px] font-semibold">
+              Why choose Only Trades?
+            </h1>
           </div>
 
           {/* Features Section */}
@@ -235,70 +283,136 @@ const Plan = () => {
             data-aos-delay="400"
             className="bg-white rounded-3xl custom-shadow p-8 mt-8"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {/* Row 1 */}
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Trusted Partner
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  1-stage evaluation
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Reliable and transparent, empowering trader success.
+                </p>
               </div>
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Innovative Tools
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  12% profit target
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Cutting-edge technology for a competitive edge.
+                </p>
               </div>
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+
+              {/* Row 2 */}
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Account Scaling
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  4% daily drawdown
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Grow your account balance over time.
+                </p>
               </div>
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Custom Evaluation
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  Scale every30 days
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Create a truly personalized evaluation experience.
+                </p>
               </div>
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+
+              {/* Row 3 */}
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Always Available
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  Up to 90% profit share
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  24/5 customer support, whenever you need it.
+                </p>
               </div>
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Optimal Trading Conditions
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  8% max drawdown
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Raw spreads or commission-free trading.
+                </p>
               </div>
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+
+              {/* Row 4 */}
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Maximize Your Earnings
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  No time constraints
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Keep up to 100% of your profits.
+                </p>
               </div>
-              <div className="flex items-center">
-                <div className="text-[#6cb6ff] mr-3">
-                  <Image src={confirmIcon} alt="checked-icon" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Fast Payouts
+                  </h3>
                 </div>
-                <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">
-                  No expensive add-ons
-                </span>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Access your earnings within 24 hours.
+                </p>
+              </div>
+
+              {/* Row 5 */}
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="text-[#6cb6ff]">
+                    <Image src={confirmIcon} alt="checked-icon" />
+                  </div>
+                  <h3 className="text-[#6cb6ff] text-[20px] font-semibold">
+                    Learn & Grow
+                  </h3>
+                </div>
+                <p className="text-[#2e3b7d] text-[16px] ml-9">
+                  Valuable trading insights and educational resources.
+                </p>
               </div>
             </div>
           </div>

@@ -1,62 +1,157 @@
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import confirmIcon from "@/public/assets/icons/4.svg";
+
 interface PricingCardProps {
   icon: StaticImageData;
   amount: number;
-  seedFunding: string;
-  seriesFunding: string;
-  maxFunding: string;
+  virtualProfitTarget: string;
+  maxDrawdown: string;
+  maxDailyDrawdown: string;
+  minTradingDays: string;
+  newsTrading?: string;
+  profitSplit: string;
   testFee: number;
+  isAdvanced?: boolean;
 }
 
-const PricingCard = ({
+const formatAmount = (amount: number): string => {
+  if (amount >= 1000) {
+    return `${amount / 1000}K`;
+  }
+  return amount.toString();
+};
+
+const formatTestFee = (amount: number): string => {
+  return amount.toFixed(2);
+};
+
+const PricingCard: React.FC<PricingCardProps> = ({
   icon,
   amount,
-  seedFunding,
-  seriesFunding,
-  maxFunding,
+  virtualProfitTarget,
+  maxDrawdown,
+  maxDailyDrawdown,
+  minTradingDays,
+  newsTrading,
+  profitSplit,
   testFee,
-}: PricingCardProps) => {
+  isAdvanced,
+}) => {
   return (
-    <div className="bg-white rounded-[46px] custom-shadow p-6 relative font-violet-sans select-none">
-      <div className="flex justify-between items-start mb-8">
+    <div className="bg-white rounded-[46px] custom-shadow p-6 h-full">
+      <div className="flex justify-between items-start mb-6">
         <div className="bg-[#e1e8f7] p-3 rounded-2xl">
-          <div className="w-8 h-8 flex">
-            <Image src={icon} alt="card-icon" />
-          </div>
+          <Image src={icon} alt="plan icon" width={32} height={32} />
         </div>
-        <div className="text-[#2e3b7d] text-[24px] md:text-[28px] lg:text-[32px]">${amount}</div>
+        <h3 className="text-[#2e3b7d] text-[24px] font-bold">
+          ${formatAmount(amount)}
+        </h3>
       </div>
 
-      <div className="space-y-4 mb-8">
-        <div className="flex items-center">
-          <div className="text-[#6cb6ff] mr-3">
-            <Image src={confirmIcon} alt="checked-icon" />
+      <div className="space-y-4 mb-6">
+        <div className="flex items-center gap-2">
+          <Image
+            src={confirmIcon}
+            alt="check"
+            width={20}
+            height={20}
+            className="text-[#6cb6ff]"
+          />
+          <div className="flex justify-between items-center flex-1">
+            <span className="text-[#4f5b7d]">
+              {isAdvanced ? "Profit Target" : "Virtual Profit Target"}
+            </span>
+            <span className="text-[#2e3b7d] font-medium">
+              {virtualProfitTarget}
+            </span>
           </div>
-          <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">{seedFunding}</span>
         </div>
-        <div className="flex items-center">
-          <div className="text-[#6cb6ff] mr-3">
-            <Image src={confirmIcon} alt="checked-icon" />
+        <div className="flex items-center gap-2">
+          <Image
+            src={confirmIcon}
+            alt="check"
+            width={20}
+            height={20}
+            className="text-[#6cb6ff]"
+          />
+          <div className="flex justify-between items-center flex-1">
+            <span className="text-[#4f5b7d]">Max Drawdown</span>
+            <span className="text-[#2e3b7d] font-medium">{maxDrawdown}</span>
           </div>
-          <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">{seriesFunding}</span>
         </div>
-        <div className="flex items-center">
-          <div className="text-[#6cb6ff] mr-3">
-            <Image src={confirmIcon} alt="checked-icon" />
+        <div className="flex items-center gap-2">
+          <Image
+            src={confirmIcon}
+            alt="check"
+            width={20}
+            height={20}
+            className="text-[#6cb6ff]"
+          />
+          <div className="flex justify-between items-center flex-1">
+            <span className="text-[#4f5b7d]">Max Daily Drawdown</span>
+            <span className="text-[#2e3b7d] font-medium">
+              {maxDailyDrawdown}
+            </span>
           </div>
-          <span className="text-[#2e3b7d] text-[16px] md:text-[18px]">{maxFunding}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Image
+            src={confirmIcon}
+            alt="check"
+            width={20}
+            height={20}
+            className="text-[#6cb6ff]"
+          />
+          <div className="flex justify-between items-center flex-1">
+            <span className="text-[#4f5b7d]">Minimum Trading Days</span>
+            <span className="text-[#2e3b7d] font-medium">{minTradingDays}</span>
+          </div>
+        </div>
+        {!isAdvanced && (
+          <div className="flex items-center gap-2">
+            <Image
+              src={confirmIcon}
+              alt="check"
+              width={20}
+              height={20}
+              className="text-[#6cb6ff]"
+            />
+            <div className="flex justify-between items-center flex-1">
+              <span className="text-[#4f5b7d]">News Trading</span>
+              <span className="text-[#2e3b7d] font-medium">{newsTrading}</span>
+            </div>
+          </div>
+        )}
+        <div className="flex items-center gap-2">
+          <Image
+            src={confirmIcon}
+            alt="check"
+            width={20}
+            height={20}
+            className="text-[#6cb6ff]"
+          />
+          <div className="flex justify-between items-center flex-1">
+            <span className="text-[#4f5b7d]">Profit Split</span>
+            <span className="text-[#2e3b7d] font-medium">{profitSplit}</span>
+          </div>
         </div>
       </div>
 
-      <div className="flex justify-between items-center mb-6">
-        <span className="text-[#2e3b7d] text-[16px] md:text-[18px] font-medium">Test fee:</span>
-        <span className="text-[#2e3b7d] text-[20px] md:text-[24px]">${testFee}</span>
+      {/* Separator and Test Fee section */}
+      <div className="border-t border-[#e1e8f7] pt-6 mb-6">
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-[#2e3b7d] font-bold text-[22px]">
+            ${formatTestFee(testFee)}
+          </span>
+          <span className="text-[#4f5b7d] text-[13px] font-medium">
+            for {formatAmount(amount)} account
+          </span>
+        </div>
       </div>
 
-      <button className="w-full gradient-blue-button text-white min-h-[46px] rounded-2xl cursor-pointer text-[16px] md:text-[18px] font-medium">
-        Start Test
+      <button className="w-full py-3 bg-[#6cb6ff] text-white rounded-2xl hover:bg-[#5aa5ff] transition-all duration-300">
+        Start Challenge
       </button>
     </div>
   );
