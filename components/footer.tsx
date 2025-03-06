@@ -65,7 +65,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-[#2E3B7D] opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
+                    className="text-[#2E3B7D]  opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
                   >
                     Legal
                   </Link>
