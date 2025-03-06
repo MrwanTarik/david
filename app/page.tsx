@@ -35,7 +35,7 @@ export default function Home() {
         {/* <Testimonials /> */}
         {/* <Features /> */}
         <HowItWorks />
-        <About />
+        {/* <About /> */}
         {/* <PayoutProcess /> */}
         {/* <ScalingProgram /> */}
         {/* <BlogArchieve /> */}

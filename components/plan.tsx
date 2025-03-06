@@ -268,7 +268,7 @@ const Plan = () => {
           </div>
 
           {/* Titles Section */}
-          <div className="text-center mb-8">
+          <div className="text-center mt-12 mb-8">
             <h2 className="text-[#6cb6ff] text-[16px] md:text-[20px] mb-2">
               KEY BENEFITS
             </h2>

@@ -26,7 +26,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="pt-8 pb-5 md:pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative   ">
+    <header className="pt-8 pb-5 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative   ">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         <Link
           href="/"

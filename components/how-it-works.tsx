@@ -2,23 +2,23 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Start",
-      description: "Choose your seed funding and purchase a test.",
+      title: "Register",
+      description: "Sign up and choose a trading evaluation plan.",
     },
     {
       number: "02",
-      title: "Pass",
-      description: "Hit the profit target without breaking any rules.",
+      title: "Evaluate",
+      description: "Prove your strategy by managing risk and earning profit.",
     },
     {
       number: "03",
-      title: "Earn",
-      description: "Receive payments for the pips generated in your account.",
+      title: "Start Earning",
+      description: "Access your account and earn up to 100% profits.",
     },
     {
       number: "04",
-      title: "Scale",
-      description: "Your funding will grow every time you reach a target.",
+      title: "Level Up",
+      description: "Strengthen your strategy and trade live with Only Trades.",
     },
   ];
 
