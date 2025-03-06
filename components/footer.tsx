@@ -4,6 +4,7 @@ import Facebook from "@/public/assets/icons/Facebook.svg";
 import Youtube from "@/public/assets/icons/Youtube.svg";
 import Twitter from "@/public/assets/icons/Twitter.svg";
 import Linkedin from "@/public/assets/icons/linkedin.svg";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -12,9 +13,9 @@ export default function Footer() {
         <div className="grid grid-cols-12 gap-8 border-t border-[#e1e8f7] pt-[20px]">
           {/* Logo and description */}
           <div className="col-span-12 md:col-span-3">
-            <h2 className="text-[32px] font-normal text-[#2e3b7d] mb-4 font-poppins">
-              LOGO
-            </h2>
+            <div className="mb-4">
+              <Logo />
+            </div>
             <p className="text-[#2e3b7d] leading-relaxed font-poppins font-normal">
               Transforming Ambition into Achievement – Only Trades Leads the
               Way.

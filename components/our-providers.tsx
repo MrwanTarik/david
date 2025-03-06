@@ -30,7 +30,8 @@ const OurProviders = () => {
     <div className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative">
       {/* Providers Grid */}
       <div className="grid grid-cols-12 md:gap-8">
-        <div className="col-span-12 md:col-span-4 text-center md:text-left mb-8 md:mb-0">
+        <div className="col-span-12 md:col-span-4 text-center md:text-left mb-8 md:mb-0" 
+             data-aos="fade-right">
           <div className="mb-8">
             <p className="text-[#6CB6FF] text-[14px] md:text-[17px] mb-2">
               OUR PROVIDERS
@@ -45,7 +46,7 @@ const OurProviders = () => {
         </div>
 
         {/* Provider Cards */}
-        <div className="col-span-12 md:col-span-8">
+        <div className="col-span-12 md:col-span-8" data-aos="fade-left">
           {providerData.map((provider, index) => (
             <ProviderCard
               key={index}
@@ -54,6 +55,8 @@ const OurProviders = () => {
               logoSrc={provider.logoSrc}
               logoAlt={provider.logoAlt}
               logoPosition={provider.logoPosition}
+              data-aos="fade-up"
+              data-aos-delay={100 * (index + 1)}
             />
           ))}
         </div>

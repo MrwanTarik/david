@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/assets/logo.svg";
+import Logo from "@/components/Logo";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,30 +29,20 @@ export default function Header() {
   return (
     <header className="pt-8 pb-5 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative   ">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-[#2e3b7d] text-[32px] font-inter font-bold z-10 flex items-center gap-2"
-        >
-          <Image src={logo} alt="Logo" className="w-[65px] h-[65px]" />
-          <span className="text-[#14AAF5] text-[20px] font-violet-sans z-10 md:block hidden ">Only Trades</span>
-        </Link>
+        <Logo />
 
         <nav className="hidden md:flex items-center space-x-8">
-          {[
-            "Home",
-            "Products",
-            "Be a Partner",
-            "FAQ",
-            "Client Area",
-          ].map((item, index) => (
-            <Link
-              key={index}
-              href="#"
-              className="text-[#2e3b7d] z-10 hover:text-[#39b4ff] transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
+          {["Home", "Products", "Be a Partner", "FAQ", "Client Area"].map(
+            (item, index) => (
+              <Link
+                key={index}
+                href="#"
+                className="text-[#2e3b7d] z-10 hover:text-[#39b4ff] transition-colors"
+              >
+                {item}
+              </Link>
+            )
+          )}
         </nav>
 
         <div className="flex items-center space-x-4 z-10 menu-icon-login">
@@ -83,22 +74,18 @@ export default function Header() {
         }`}
       >
         <nav className="px-4 py-2">
-          {[
-            "Home",
-            "Products",
-            "Be a Partner",
-            "FAQ",
-            "Client Area",
-          ].map((item, index) => (
-            <Link
-              key={index}
-              href="#"
-              className="block text-[#2e3b7d] hover:bg-[#f3f7fc] px-4 py-2 transition-colors"
-              onClick={toggleMenu}
-            >
-              {item}
-            </Link>
-          ))}
+          {["Home", "Products", "Be a Partner", "FAQ", "Client Area"].map(
+            (item, index) => (
+              <Link
+                key={index}
+                href="#"
+                className="block text-[#2e3b7d] hover:bg-[#f3f7fc] px-4 py-2 transition-colors"
+                onClick={toggleMenu}
+              >
+                {item}
+              </Link>
+            )
+          )}
         </nav>
       </div>
     </header>
