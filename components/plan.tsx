@@ -160,7 +160,7 @@ const Plan = () => {
         src={CloudRightImage}
         alt=""
       />
-      <div className="pt-8 pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
+      <div id="pricing" className="pt-8 pb-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
         <div className="max-w-7xl mx-auto">
           <div
             data-aos="fade-up"
@@ -174,7 +174,7 @@ const Plan = () => {
             <div
               data-aos="fade-left"
               data-aos-delay="200"
-              className="flex justify-center sm:justify-end gap-4 font-inter"
+              className="flex items-center md:items-start justify-center sm:justify-end gap-4 font-inter w-full md:w-auto"
             >
               <button
                 onClick={() => setActiveTab("basic")}
@@ -200,7 +200,7 @@ const Plan = () => {
           </div>
 
           {/* Add navigation arrows above the card swiper */}
-          <div className="flex justify-end mb-4">
+          <div className="justify-end mb-4 hidden md:flex">
             <div className="flex gap-4" data-aos="fade-left" data-aos-delay="300">
               <button
                 className="plan-prev-button w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-[#e1e8f7] flex items-center justify-center hover:bg-[#d7e0f4] transition-colors swiper-button-disabled"
@@ -292,7 +292,7 @@ const Plan = () => {
           </div>
 
           {/* Titles Section */}
-          <div className="text-center mt-12 mb-8">
+          <div id="features" className="text-center pt-12 pb-8">
             <h2 className="text-[#6cb6ff] text-[16px] md:text-[20px] mb-2">
               KEY BENEFITS
             </h2>

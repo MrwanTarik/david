@@ -27,16 +27,16 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="pt-8 pb-5 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative   ">
+    <header id="home" className="pt-8 pb-5 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative   ">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         <Logo />
 
         <nav className="hidden md:flex items-center space-x-8">
-          {["Home", "Products", "Be a Partner", "FAQ", "Client Area"].map(
+          {["Home", "Pricing", "Features", "How it works", "FAQ"].map(
             (item, index) => (
               <Link
                 key={index}
-                href="#"
+                href={`#${item.toLowerCase()}`}
                 className="text-[#2e3b7d] z-10 hover:text-[#39b4ff] transition-colors"
               >
                 {item}
@@ -50,7 +50,7 @@ export default function Header() {
             asChild
             className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white rounded-[15px] px-6 w-[123px] h-[46px] flex justify-center items-center font-inter"
           >
-            <Link href="#">Dashboard</Link>
+            <Link href="https://mtr-demo-prod.match-trader.com/dashboard">Dashboard</Link>
           </Button>
 
           <Button

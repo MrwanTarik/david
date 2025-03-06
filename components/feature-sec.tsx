@@ -43,7 +43,7 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="py-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
+    <div id="faq" className="py-20 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
         <div data-aos="fade-right" className="md:w-[40%]">
           <h2 className="text-[32px] md:text-[40px] lg:text-[48px] text-[#2e3b7d] mb-8 font-violet-sans font-normal text-center md:text-left">

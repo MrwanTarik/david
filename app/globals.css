@@ -129,6 +129,9 @@
   --font-violet-sans: "Violet Sans", "sans-serif";
 }
 
+html {
+  scroll-behavior: smooth;
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;

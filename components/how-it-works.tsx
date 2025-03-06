@@ -23,7 +23,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <div className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
+    <div id="how it works" className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto">
       <h2 className="text-center text-[32px] md:text-[40px] lg:text-[48px] font-violet-sans mb-8 md:mb-12">
         <span className="text-[#6CB6FF]">How</span>
         <span className="text-[#2e3b7d]"> it works</span>

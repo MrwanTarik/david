@@ -17,7 +17,7 @@ const ProviderCard: React.FC<ProviderCardProps> = ({
   logoPosition = "top-right",
 }) => {
   return (
-    <div className="bg-white text-center md:text-left rounded-3xl custom-shadow py-8 md:py-12 px-8 backdrop-blur-sm p-8 mb-6">
+    <div className="bg-white text-center md:text-left rounded-3xl custom-shadow py-8 md:py-12 px-8 backdrop-blur-sm p-8">
       <div className="flex flex-col">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-[22px] md:text-[26px] lg:text-[30px] text-[#6CB6FF] font-violet-sans">

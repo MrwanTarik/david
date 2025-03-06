@@ -46,7 +46,7 @@ export default function CTASection() {
                 asChild
                 className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:opacity-90 transition-opacity text-white font-normal w-[130px] h-[46px] flex justify-center items-center text-[16px] rounded-lg font-violet-sans "
               >
-                <Link href="#">Get started</Link>
+                <Link href="#pricing">Get started</Link>
               </Button>
 
               <Button

@@ -57,18 +57,22 @@ const OurProviders = () => {
         </div>
 
         {/* Provider Cards */}
-        <div className="col-span-12 md:col-span-8" data-aos="fade-left">
+        <div className="col-span-12 md:col-span-8 space-y-6">
           {providerData.map((provider, index) => (
-            <ProviderCard
+            <div 
               key={index}
-              title={provider.title}
-              description={provider.description}
-              logoSrc={provider.logoSrc}
-              logoAlt={provider.logoAlt}
-              logoPosition={provider.logoPosition}
               data-aos="fade-up"
-              data-aos-delay={100 * (index + 1)}
-            />
+              data-aos-delay={index * 100}
+              data-aos-duration="800"
+            >
+              <ProviderCard
+                title={provider.title}
+                description={provider.description}
+                logoSrc={provider.logoSrc}
+                logoAlt={provider.logoAlt}
+                logoPosition={provider.logoPosition}
+              />
+            </div>
           ))}
         </div>
       </div>

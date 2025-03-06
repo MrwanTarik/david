@@ -3,10 +3,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import LogoSection from "@/components/logo-section";
 import heroBg from "@/public/assets/Pattern.svg";
+import AnimatedPattern from "./AnimatedPattern";
 
 export default function HeroSection() {
   return (
-    <div className="px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto mb-30">
+    <div className="px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto my-20">
       <div className="max-w-[1440px] mx-auto z-10 relative">
         {/* <Image src={heroBg} alt="Hero background" className="absolute object-cover top-0 left-[50%] translate-x-[-50%] z-1 bottom-[80px]" /> */}
         <div className="grid grid-cols-12 items-center">
@@ -32,7 +33,7 @@ export default function HeroSection() {
                 asChild
                 className="bg-gradient-to-r from-[#14AAF5] to-[#7ECEFF] hover:bg-[#2ea3ee] text-white w-[150px] h-[50px]  sm:w-[178px] sm:h-[56px] flex items-center justify-center text-[16px] rounded-lg shadow-md hover:opacity-90 transition-opacity font-violet-sans button-shadow"
               >
-                <Link href="#">Get started</Link>
+                <Link href="#pricing">Get started</Link>
               </Button>
 
               <Button
@@ -48,11 +49,7 @@ export default function HeroSection() {
             className="relative md:block hidden col-span-12 md:col-span-6"
             data-aos="fade-left"
           >
-            <Image
-              src={heroBg}
-              alt="Hero background"
-              className="object-cover"
-            />
+            <AnimatedPattern />
           </div>
         </div>
       </div>
