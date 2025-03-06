@@ -201,7 +201,7 @@ const Plan = () => {
 
           {/* Add navigation arrows above the card swiper */}
           <div className="flex justify-end mb-4">
-            <div className="flex gap-4">
+            <div className="flex gap-4" data-aos="fade-left" data-aos-delay="300">
               <button
                 className="plan-prev-button w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-[#e1e8f7] flex items-center justify-center hover:bg-[#d7e0f4] transition-colors swiper-button-disabled"
                 aria-label="Previous plan"
