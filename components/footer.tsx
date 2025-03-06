@@ -31,7 +31,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="#"
+                    href="#pricing"
                     className="text-[#2E3B7D] opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
                   >
                     Pricing
@@ -39,7 +39,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#features"
                     className="text-[#2E3B7D] opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
                   >
                     Why Us?
@@ -47,7 +47,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#faq"
                     className="text-[#2E3B7D] opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
                   >
                     FAQ{" "}
