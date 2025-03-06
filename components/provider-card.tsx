@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 
 interface ProviderCardProps {
@@ -17,11 +16,6 @@ const ProviderCard: React.FC<ProviderCardProps> = ({
   logoAlt,
   logoPosition = "top-right",
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const shortDescription =
-    description.length > 90 ? description.slice(0, 90) + "..." : description;
-
   return (
     <div className="bg-white text-center md:text-left rounded-3xl custom-shadow py-8 md:py-12 px-8 backdrop-blur-sm p-8 mb-6">
       <div className="flex flex-col">
@@ -42,17 +36,8 @@ const ProviderCard: React.FC<ProviderCardProps> = ({
         )}
 
         <p className="text-[#2e3b7d] text-[14px] md:text-[18px] mb-6">
-          {isExpanded ? description : shortDescription}
+          {description}
         </p>
-
-        {description.length > 90 && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-[#6CB6FF] hover:text-[#2e3b7d] transition-colors duration-300 text-[12px] md:text-[16px]"
-          >
-            {isExpanded ? "Show less..." : "Show more..."}
-          </button>
-        )}
       </div>
     </div>
   );

@@ -169,7 +169,6 @@ body {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-  
 }
 
 .gradient-blue-button:hover {
@@ -335,4 +334,10 @@ body {
 /* Optional: Add a subtle shadow to the cards */
 .shadow-lg {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Add this to your global CSS file to style disabled navigation buttons */
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
 }

@@ -6,6 +6,9 @@ import cardIcon1 from "@/public/assets/icons/1.svg";
 import cardIcon2 from "@/public/assets/icons/2.svg";
 import cardIcon3 from "@/public/assets/icons/3.svg";
 import confirmIcon from "@/public/assets/icons/4.svg";
+// Import arrow icons
+import leftArrow from "@/public/assets/icons/left-arrow.svg";
+import rightArrow from "@/public/assets/icons/right-arrow.svg";
 // Import Swiper components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -196,6 +199,24 @@ const Plan = () => {
             </div>
           </div>
 
+          {/* Add navigation arrows above the card swiper */}
+          <div className="flex justify-end mb-4">
+            <div className="flex gap-4">
+              <button
+                className="plan-prev-button w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-[#e1e8f7] flex items-center justify-center hover:bg-[#d7e0f4] transition-colors swiper-button-disabled"
+                aria-label="Previous plan"
+              >
+                <Image src={leftArrow} alt="Previous" width={22} height={18} />
+              </button>
+              <button
+                className="plan-next-button w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-[#e1e8f7] flex items-center justify-center hover:bg-[#d7e0f4] transition-colors"
+                aria-label="Next plan"
+              >
+                <Image src={rightArrow} alt="Next" width={22} height={18} />
+              </button>
+            </div>
+          </div>
+
           <div data-aos="fade-up" data-aos-delay="300" className="mb-8">
             {isLoading ? (
               // Skeleton loading cards
@@ -236,7 +257,10 @@ const Plan = () => {
               <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={24}
-                navigation={false}
+                navigation={{
+                  prevEl: ".plan-prev-button",
+                  nextEl: ".plan-next-button",
+                }}
                 pagination={{ clickable: true }}
                 className="pricing-swiper !px-0"
                 initialSlide={0}

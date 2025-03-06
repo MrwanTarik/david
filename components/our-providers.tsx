@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import rise from "@/public/assets/icons/rise-logo.svg";
 import tradeView from "@/public/assets/icons/logo-rectangle-dark.svg";
+import Matchtrader from "@/public/assets/icons/MTT.svg";
 import ProviderCard from "./provider-card";
 
 const OurProviders = () => {
@@ -23,6 +24,14 @@ const OurProviders = () => {
       logoAlt: "TradingView logo",
       logoPosition: "top-right" as const,
     },
+    {
+      title: "Match trader",
+      description:
+        "Matchtrader platform utilizes advanced charting tools powered by TradingView, offering unparalleled insights for technical analysis of GBP USD, USD JPY, and many other currency pairs.",
+      logoSrc: Matchtrader,
+      logoAlt: "Match trader logo",
+      logoPosition: "top-right" as const,
+    },
     // You can add more providers here as needed
   ];
 
@@ -30,8 +39,10 @@ const OurProviders = () => {
     <div className="py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto relative">
       {/* Providers Grid */}
       <div className="grid grid-cols-12 md:gap-8">
-        <div className="col-span-12 md:col-span-4 text-center md:text-left mb-8 md:mb-0" 
-             data-aos="fade-right">
+        <div
+          className="col-span-12 md:col-span-4 text-center md:text-left mb-8 md:mb-0"
+          data-aos="fade-right"
+        >
           <div className="mb-8">
             <p className="text-[#6CB6FF] text-[14px] md:text-[17px] mb-2">
               OUR PROVIDERS
