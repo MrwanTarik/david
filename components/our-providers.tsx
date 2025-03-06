@@ -24,14 +24,7 @@ const OurProviders = () => {
       logoAlt: "TradingView logo",
       logoPosition: "top-right" as const,
     },
-    {
-      title: "Match trader",
-      description:
-        "Matchtrader platform utilizes advanced charting tools powered by TradingView, offering unparalleled insights for technical analysis of GBP USD, USD JPY, and many other currency pairs.",
-      logoSrc: Matchtrader,
-      logoAlt: "Match trader logo",
-      logoPosition: "top-right" as const,
-    },
+
     // You can add more providers here as needed
   ];
 
@@ -59,7 +52,7 @@ const OurProviders = () => {
         {/* Provider Cards */}
         <div className="col-span-12 md:col-span-8 space-y-6">
           {providerData.map((provider, index) => (
-            <div 
+            <div
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
@@ -70,7 +63,7 @@ const OurProviders = () => {
                 description={provider.description}
                 logoSrc={provider.logoSrc}
                 logoAlt={provider.logoAlt}
-                logoPosition={provider.logoPosition} 
+                logoPosition={provider.logoPosition}
               />
             </div>
           ))}

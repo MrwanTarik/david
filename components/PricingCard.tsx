@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import confirmIcon from "@/public/assets/icons/4.svg";
+import Link from "next/link";
 
 interface PricingCardProps {
   icon: StaticImageData;
@@ -150,9 +151,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
         </div>
       </div>
 
-      <button className="w-full py-3 bg-[#6cb6ff] text-white rounded-2xl hover:bg-[#5aa5ff] transition-all duration-300">
+      <Link
+        href={"https://mtr-demo-prod.match-trader.com/dashboard"}
+        className="w-full py-3 bg-[#6cb6ff] text-white rounded-2xl hover:bg-[#5aa5ff] transition-all duration-300 inline-block text-center"
+      >
         Start Challenge
-      </button>
+      </Link>
     </div>
   );
 };
