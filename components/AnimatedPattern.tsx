@@ -21,7 +21,7 @@ export default function AnimatedPattern() {
   return (
     <motion.svg
       width="100%"
-  height="100%"
+      height="100%"
       viewBox="0 0 711 699"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export default function AnimatedPattern() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       preserveAspectRatio="xMidYMid meet"
-       className="w-full h-auto"
+      className="w-full h-auto"
     >
       {/* Main container with breathing effect */}
       <motion.g
@@ -256,10 +256,10 @@ export default function AnimatedPattern() {
         </mask>
         <g mask="url(#mask0_85_171)">
           <rect
-            width="280"
-            height="280"
-            x="280"
-            y="279"
+            width="400"
+            height="400"
+            x="220"
+            y="219"
             fill="url(#pattern0_85_171)"
           />
         </g>
@@ -273,7 +273,7 @@ export default function AnimatedPattern() {
           >
             <use
               xlinkHref="#image0_85_171"
-              transform="matrix(0.00104167 0 0 0.000823206 0 -0.0927083)"
+              transform="matrix(0.001367 0 0 0.001367 -0.2 -0.1)"
             />
           </pattern>
           <image

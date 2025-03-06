@@ -7,11 +7,11 @@ import AnimatedPattern from "./AnimatedPattern";
 
 export default function HeroSection() {
   return (
-    <div className="px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto my-20">
+    <div className="px-4 md:px-8 lg:px-20 max-w-[1440px] mx-auto my-20 md:my-0 mb-0 md:mb-30">
       <div className="max-w-[1440px] mx-auto z-10 relative">
         {/* <Image src={heroBg} alt="Hero background" className="absolute object-cover top-0 left-[50%] translate-x-[-50%] z-1 bottom-[80px]" /> */}
         <div className="grid grid-cols-12 items-center">
-          <div 
+          <div
             className="col-span-12 text-center md:text-left md:col-span-6"
             data-aos="fade-right"
           >
@@ -24,7 +24,7 @@ export default function HeroSection() {
               to grow your account with additional funding rounds.
             </p>
 
-            <div 
+            <div
               className="flex flex-row justify-center md:justify-start gap-4"
               data-aos="fade-up"
               data-aos-delay="200"
@@ -45,10 +45,7 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <div 
-            className="relative md:block hidden col-span-12 md:col-span-6"
-            data-aos="fade-left"
-          >
+          <div className="relative md:block hidden col-span-12 md:col-span-6">
             <AnimatedPattern />
           </div>
         </div>
