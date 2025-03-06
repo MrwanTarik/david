@@ -70,7 +70,7 @@ const OurProviders = () => {
                 description={provider.description}
                 logoSrc={provider.logoSrc}
                 logoAlt={provider.logoAlt}
-                logoPosition={provider.logoPosition}
+                logoPosition={provider.logoPosition} 
               />
             </div>
           ))}
