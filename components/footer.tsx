@@ -64,15 +64,15 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="#"
+                    href="/privacy-policy"
                     className="text-[#2E3B7D]  opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
                   >
-                    Legal
+                    Privacy Policy
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/terms-and-conditions"
                     className="text-[#2E3B7D] opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
                   >
                     Terms & Conditions
@@ -80,10 +80,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/cookies-policy"
                     className="text-[#2E3B7D] opacity-[60%] font-poppins font-normal hover:text-[#2e3b7d] transition-colors"
                   >
-                    Refund Policy
+                    Cookies Policy
                   </Link>
                 </li>
               </ul>

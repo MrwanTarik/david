@@ -19,7 +19,7 @@ const Earn = () => {
               Enjoy timely payouts tailored to your needs, with guaranteed reliability.
             </p>
             <p className='text-[#2e3b7d] text-[12px] md:text-[16px]'>
-              Choose from a variety of options tailored to meet your requirements, each with a unique payout policy to ensure a perfect fit for every trader's needs. You can opt to receive up to 100% of your profits while enjoying the flexibility to withdraw daily or bi-weekly. Join the successful team of E8 Traders, where over $44,000,000 has already been paid out to traders like you. Rest assured, your hard work will always be rewarded on time and without compromise.
+              Choose from a variety of options tailored to meet your requirements, each with a unique payout policy to ensure a perfect fit for every trader's needs. You can opt to receive up to 100% of your profits while enjoying the flexibility to withdraw daily or bi-weekly. Join the successful team of Only Trades Traders, where over $44,000,000 has already been paid out to traders like you. Rest assured, your hard work will always be rewarded on time and without compromise.
             </p>
           </div>
           <div className='w-full lg:col-span-5' data-aos="fade-left" data-aos-delay="300">

@@ -11,7 +11,7 @@ const OurProviders = () => {
     {
       title: "Payout system",
       description:
-        "E8 Traders can request their first payout after 8 days, with subsequent payouts available every 14 days. We ensure quick and secure transfers, supporting multiple payment methods including bank transfers and digital wallets. Our streamlined process makes it easy for traders to access their earnings.",
+        "Only Trades Traders can request their first payout after 8 days, with subsequent payouts available every 14 days. We ensure quick and secure transfers, supporting multiple payment methods including bank transfers and digital wallets. Our streamlined process makes it easy for traders to access their earnings.",
       logoSrc: rise,
       logoAlt: "Rise logo",
       logoPosition: "top-right" as const,

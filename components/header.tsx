@@ -36,7 +36,7 @@ export default function Header() {
             (item, index) => (
               <Link
                 key={index}
-                href={`#${item.toLowerCase()}`}
+                href={`${item === 'Home' ? '/' : `#${item.toLowerCase()}`}`}
                 className="text-[#2e3b7d] z-10 hover:text-[#39b4ff] transition-colors"
               >
                 {item}

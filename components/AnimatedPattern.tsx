@@ -255,7 +255,7 @@ export default function AnimatedPattern() {
           />
         </mask>
         <g mask="url(#mask0_85_171)">
-          <rect width="400" height="400" x="220" y="219" fill="#6CB6FF" />
+          <rect width="400" height="400" x="220" y="219" fill="#14AAF5" />
         </g>
       </motion.g>
     </motion.svg>
